@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            background-color: rgb(62, 253, 72);
+            border: solid 2px;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 200px;
+        }
+    </style>
+    <script>
+        function hitung() {
+            let inp = document.getElementById("masukan").value; 
+            let drop = document.getElementById("list_uang").value;
+            let result = parseInt(inp) * parseInt(drop);
+            if (result) {
+                document.getElementById("hasil").value = "Rp. " + result ;
+            }
+        }
+        
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <h1 style="text-align: center;">KURS MATA UANG</h1>
+        <table style="display: flex; justify-content: center;">
+            <tr>
+                <th>Masukkan Nilai</th>
+                <th>Valax</th>
+                <th>Nilai Rupiah</th>
+            </tr>
+            <tr>
+                <td><input type="number" value="" id="masukan" onchange="hitung()"></td>
+                <td>
+                    <select id="list_uang" onchange="hitung()">
+                        <option value="0">Pilih Mata Uang</option>
+                        <option value="9915">Dollar US</option>
+                        <option value="13472">Dollar Singapure</option>
+                        <option value="874">Ringgit Malaysia</option>
+                        <option value="120">Yen Jepang</option>
+                        <option value="15888">Euro</option>
+                        <option value="3592">Riyal Arab saudi</option>
+                    </select> 
+                </td>
+                <td><input type="text" value="" id="hasil" ></td>
+            </tr>
+        </table>
+        <br>
+    </fieldset>
+</body>
+</html>
